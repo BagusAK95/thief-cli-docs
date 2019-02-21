@@ -32,7 +32,7 @@ Object containing querystring values to be appended to the `uri`
 ```
 - qs:
   - page: 1
-  - access_token: xxx
+  - access_token: xxxxx
 ```
 
 The url will be `https://demo.website.com?page=1&access_token=xxxxx`
@@ -57,6 +57,11 @@ There are 2 options for scraping mode namely `thisPage` and` toDetail`.
 ```
 
 ## interval
+The time needed to get content from the first page and the next page
+
+```
+- interval: 10000 #10 seconds
+```
 
 ## parent
 

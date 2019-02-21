@@ -13,17 +13,17 @@ Thief CLI - Documentation of Yaml Configuration
 ## target
 
 #### uri [Required]
-Full url
+The url that you want to steal the content
 
 ```
 - uri: https://demo.website.com
 ```
 
-#### timeout [Optional]
+#### timeout [Optional] (Default: 60000)
 Time to wait for a server to send response before aborting the request.
 
 ```
-- timeout: 60000 #1 minute
+- timeout: 300000 #5 minute
 ```
 
 #### qs [Optional]

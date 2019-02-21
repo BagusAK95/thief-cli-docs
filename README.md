@@ -1,6 +1,7 @@
 Thief CLI - Documentation of Yaml Configuration
 =========
 
+# Configs
 <!-- configs -->
 * [`target`](#target)
 * [`stealingMode`](#stealingMode)

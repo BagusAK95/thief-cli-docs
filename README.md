@@ -19,9 +19,19 @@ Thief CLI - Documentation of Yaml Configuration
 * [`body`](#body)
 * [`formData`](#formData)
 
-#### uri
+#### uri [Required]
+Full url
 
-#### method
+```
+- uri: https://demo.website.com
+```
+
+#### method [Optional] (Default: GET)
+HTTP Method (GET, POST, PUT, DELETE)
+
+```
+- method: GET
+```
 
 #### timeout
 

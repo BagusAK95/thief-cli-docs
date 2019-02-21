@@ -11,13 +11,6 @@ Thief CLI - Documentation of Yaml Configuration
 * [`saveAs`](#saveAs)
 
 ## target
-* [`uri`](#uri)
-* [`method`](#method)
-* [`timeout`](#timeout)
-* [`qs`](#qs)
-* [`headers`](#headers)
-* [`body`](#body)
-* [`formData`](#formData)
 
 #### uri [Required]
 Full url
@@ -48,20 +41,12 @@ HTTP Method (GET, POST, PUT, DELETE)
 ## interval
 
 ## parent
-* [`selector`](#selector)
-* [`attribute`](#attribute)
 
 #### selector
 
 #### attribute
 
 ## childs
-* [`content`](#content)
-* [`selector`](#selector)
-* [`attribute`](#attribute)
-* [`regex`](#regex)
-* [`group`](#group)
-* [`format`](#format)
 
 #### content
 
@@ -76,8 +61,6 @@ HTTP Method (GET, POST, PUT, DELETE)
 #### format
 
 ## nextPage
-* [`selector`](#selector)
-* [`attribute`](#attribute)
 
 #### selector
 

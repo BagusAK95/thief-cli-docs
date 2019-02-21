@@ -49,8 +49,8 @@ HTTP Headers
 ## scrapingMode [Optional] (Default: thisPage)
 There are 2 options for scraping mode namely `thisPage` and` toDetail`.
 
-* thisPage is scraping mode only get data from one page
-* toDetail is scraping mode that get data from url detail previously taken
+* `thisPage` is a scraping mode that get content from one page
+* `toDetail` is a scraping mode that get content from page details
 
 ```
 - scrapingMode: toDetail

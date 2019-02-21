@@ -3,7 +3,7 @@ Thief CLI - Documentation of Yaml Configuration
 
 <!-- configs -->
 * [`target`](#target)
-* [`scrapingMode`](#scrapingMode)
+* [`stealingMode`](#stealingMode)
 * [`interval`](#interval)
 * [`parent`](#parent)
 * [`childs`](#childs)
@@ -46,14 +46,14 @@ HTTP Headers
   - content-type: application/json
 ```
 
-## scrapingMode [Optional] (Default: thisPage)
+## stealingMode [Optional] (Default: thisPage)
 There are 2 options for scraping mode namely `thisPage` and` toDetail`.
 
 * `thisPage` is a scraping mode that get content from one page
 * `toDetail` is a scraping mode that get content from page details
 
 ```
-- scrapingMode: toDetail
+- stealingMode: toDetail
 ```
 
 ## interval

@@ -26,7 +26,7 @@ Time to wait for a server to send response before aborting the request.
 - timeout: 60000 #1 minute
 ```
 
-#### qs
+#### qs [Optional]
 Object containing querystring values to be appended to the `uri`
 
 ```
@@ -37,7 +37,7 @@ Object containing querystring values to be appended to the `uri`
 
 The url will be `https://demo.website.com?page=1&access_token=xxxxx`
 
-#### headers
+#### headers [Optional]
 HTTP Headers
 
 ```
@@ -46,7 +46,15 @@ HTTP Headers
   - content-type: application/json
 ```
 
-## scrapingMode
+## scrapingMode [Optional] (Default: thisPage)
+There are 2 options for scraping mode namely `thisPage` and` toDetail`.
+
+* thisPage is scraping mode only get data from one page
+* toDetail is scraping mode that get data from url detail previously taken
+
+```
+- scrapingMode: toDetail
+```
 
 ## interval
 

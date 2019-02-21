@@ -2,7 +2,7 @@ description: Indeks berita terbaru hari ini dari peristiwa, kecelakaan, kriminal
 target:
     uri: 'https://news.detik.com/indeks/'
 interval: 5000
-scrapingMode: toDetail
+stealingMode: toDetail
 parent:
     selector: 'div.desc_idx > a'
     attribute: 'href'

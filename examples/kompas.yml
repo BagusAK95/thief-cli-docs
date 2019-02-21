@@ -2,7 +2,7 @@ description: Berita Indonesia dan Dunia Terkini Hari Ini, Kabar Harian Terbaru T
 target:
     uri: 'https://indeks.kompas.com/'
 interval: 5000
-scrapingMode: toDetail
+stealingMode: toDetail
 parent:
     selector: a.article__link
     attribute: href

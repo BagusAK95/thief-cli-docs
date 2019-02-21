@@ -56,7 +56,7 @@ There are 2 options for scraping mode namely `thisPage` and` toDetail`.
 - stealingMode: toDetail
 ```
 
-## interval
+## interval [Optional] (Default: 0)
 The time needed to get content from the first page and the next page
 
 ```

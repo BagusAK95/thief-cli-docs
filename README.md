@@ -20,19 +20,19 @@ Thief CLI - Documentation of Yaml Configuration
 * [`body`](#body)
 * [`formData`](#formData)
 
-### uri
+#### uri
 
-### method
+#### method
 
-### timeout
+#### timeout
 
-### qs
+#### qs
 
-### headers
+#### headers
 
-### body
+#### body
 
-### formData
+#### formData
 
 ## scrapingMode
 

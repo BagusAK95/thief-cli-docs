@@ -19,22 +19,32 @@ Full url
 - uri: https://demo.website.com
 ```
 
-#### method [Optional] (Default: GET)
-HTTP Method (GET, POST, PUT, DELETE)
+#### timeout [Optional]
+Time to wait for a server to send response before aborting the request.
 
 ```
-- method: GET
+- timeout: 60000 #1 minute
 ```
-
-#### timeout
 
 #### qs
+Object containing querystring values to be appended to the `uri`
+
+```
+- qs:
+  - page: 1
+  - access_token: xxx
+```
+
+The url will be `https://demo.website.com?page=1&access_token=xxxxx`
 
 #### headers
+HTTP Headers
 
-#### body
-
-#### formData
+```
+- headers:
+  - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36
+  - content-type: application/json
+```
 
 ## scrapingMode
 

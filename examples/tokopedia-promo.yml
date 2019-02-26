@@ -1,0 +1,22 @@
+description: Tokopedia Promo List
+target:
+    uri: 'https://www.tokopedia.com/promo/?s='
+stealingMode: thisPage
+parent:
+    selector: 'section#content > div.row.promo-row > div.col-md-4.col-sm-6 > div.promotion-box'
+childs:
+    -
+        content: 'title'
+        selector: 'div.promotion-description > p'
+    -
+        content: 'image'
+        selector: 'div.promotion-image > a > img'
+        attribute: 'src'
+    -
+        content: 'periode'
+        selector: 'div.promotion-description > div.promotion-date > div.promotion-date-detail > div.promotion-box__value'
+    -
+        content: 'code'
+        selector: 'div.promotion-description > div.promotion-code > div.promotion-code-detail > input.sticky-code-voucher__text'
+        attribute: 'value'
+saveAs: csv

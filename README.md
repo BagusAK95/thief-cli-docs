@@ -4,12 +4,12 @@ Thief CLI - Documentation of Yaml Configuration
 # Configs
 <!-- configs -->
 * [`target`](#target)
-* [`stealingMode`](#stealingMode)
-* [`interval`](#interval)
+* [`stealingMode`](#stealingmode-optional-default-thispage)
+* [`interval`](#interval-optional-default-0)
 * [`parent`](#parent)
 * [`childs`](#childs)
 * [`nextPage`](#nextPage)
-* [`saveAs`](#saveAs)
+* [`saveAs`](#saveas-optional-default-json)
 
 ## target
 

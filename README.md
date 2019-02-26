@@ -36,10 +36,10 @@ Object containing querystring values to be appended to the `uri`
 target:
     qs:
         page: 1
-        access_token: xxxxx
+        access_token: <Your Access token>
 ```
 
-The url will be `https://demo.website.com?page=1&access_token=xxxxx`
+The url will be `https://demo.website.com?page=1&access_token=<Your Access token>`
 
 #### headers [Optional]
 HTTP Headers
@@ -48,7 +48,6 @@ HTTP Headers
 target:
     headers:
         User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36
-        content-type: application/json
 ```
 
 ## stealingMode [Optional] (Default: thisPage)
@@ -65,7 +64,7 @@ stealingMode: toDetail
 The time needed to get content from the first page and the next page
 
 ```
-interval: 10000 #10 seconds
+interval: 5000 #5 seconds
 ```
 
 ## parent
@@ -83,7 +82,7 @@ Method for getting and setting attributes. Gets the attribute value for only the
 
 ```
 parent:
-    selector: xxxxx
+    selector: a.article__link
     attribute: href
 ```
 
@@ -96,7 +95,7 @@ Name of content.
 childs:
     -
         content: title
-        selector: xxxxx
+        selector: h1.read__title
 ```
 
 #### selector [Required]
@@ -105,8 +104,8 @@ This selector method is the starting point for traversing and manipulating the d
 ```
 childs:
     -
-        content: xxxxx
-        selector: a.article__link
+        content: author
+        selector: div#penulis > a
 ```
 
 #### attribute [Optional]
@@ -115,9 +114,9 @@ Method for getting and setting attributes. Gets the attribute value for only the
 ```
 childs:
     -
-        content: xxxxx
-        selector: xxxxx
-        attribute: href
+        content: image
+        selector: div.photo > img
+        attribute: src
 ```
 
 #### regex [Optional]
@@ -126,9 +125,9 @@ A regular expression is an object that describes a pattern of characters.
 ```
 childs:
     -
-        content: xxxxx
-        selector: xxxxx
-        regex: (\d{1,5})
+        content: date
+        selector: div.read__time
+        regex: (\d{1,4}\/\d{1,4}\/\d{1,4}, \d{1,4}\:\d{1,4})
 ```
 
 #### group [Optional]
@@ -137,9 +136,9 @@ Get regex result by group.
 ```
 childs:
     -
-        content: xxxxx
-        selector: xxxxx
-        regex: (\d{1,5})
+        content: date
+        selector: div.read__time
+        regex: (\d{1,4}\/\d{1,4}\/\d{1,4}, \d{1,4}\:\d{1,4})
         group: 1
 ```
 
@@ -149,8 +148,8 @@ Format content to be `string`, `number`, `date`
 ```
 childs:
     -
-        content: xxxxx
-        selector: xxxxx
+        content: date
+        selector: div.read__time
         format:
             type: date #string, number, date
             dateFormat: DD/MM/YYYY, HH:mm #Format date from the content result (Just for Date)
@@ -164,7 +163,7 @@ This selector method is the starting point for traversing and manipulating the d
 
 ```
 nextPage:
-    selector: a.article__link
+    selector: a.paging__link.paging__link--next[rel=next]
 ```
 
 #### attribute [Optional]
@@ -172,12 +171,12 @@ Method for getting and setting attributes. Gets the attribute value for only the
 
 ```
 nextPage:
-    selector: xxxxx
+    selector: a.paging__link.paging__link--next[rel=next]
     attribute: href
 ```
 
 ## saveAs [Optional] (Default: Json)
-Save result to be `json` and `csv`
+Save result to be `json` or `csv`
 
 ```
 saveAs: csv

@@ -1,4 +1,4 @@
-description:
+description: Situs Berita Terkini Indonesia, yang Menyajikan Berita Hari Ini, Mengenai Politik, Hukum, Nasional, Dunia, Bisnis, Bola, Seleb Hingga Travel.
 target:
     uri: 'https://www.tempo.co/indeks'
 stealingMode: toDetail

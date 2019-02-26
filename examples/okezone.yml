@@ -1,4 +1,4 @@
-description:
+description: Portal Berita Online Indonesia | Berita Terbaru Hari Ini Terkini Terhangat | Nasional Internasional Politik Ekonomi Olahraga Kesehatan Selebritis.
 target:
     uri: 'https://index.okezone.com/'
 interval: 5000

@@ -1,0 +1,42 @@
+description: SITUS berita TRIBUNnews.com dikelola PT Tribun Digital Online, Divisi Koran Daerah Kompas Gramedia (Group of Regional Newspaper). Berkantor pusat di Jakarta, situs berita ini menyajikan berita-berita nasional, regional, internasional, olahraga, ekonomi dan bisnis, serta seleb dan lifestyle.
+target:
+    uri: 'http://www.tribunnews.com/indeks'
+interval: 5000
+stealingMode: toDetail
+parent:
+    selector: ul.lsi > li.ptb15 > h3 > a
+    attribute: href
+childs:
+    -
+        content: title
+        selector: h1.f50.black2.f400.crimson
+    -
+        content: editor
+        selector: div#editor
+        regex: 'Editor: (.*)'
+        group: 1
+    -
+        content: date
+        selector: time.grey
+        regex: (.*, \d{1,4} .* \d{1,4} \d{1,4}\:\d{1,4})
+        group: 1
+        format:
+            type: date
+            dateFormat: DD MMMM YYYY HH:mm
+            dateLocale: id
+    -
+        content: image
+        selector: img.imgfull
+        attribute: src
+    -
+        content: description
+        selector: div.side-article.txt-article
+    -
+        content: tag
+        selector: div.mb10.f16.ln24.mb10.mt5 > h5.tagcloud3 > a
+    -
+        content: sumber
+        selector: div.f12.grey.mb15 > div > a
+nextPage:
+    selector: div.paging > a:contains("Next")
+    attribute: href

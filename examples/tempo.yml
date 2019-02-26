@@ -1,0 +1,36 @@
+description:
+target:
+    uri: 'https://www.tempo.co/indeks'
+stealingMode: toDetail
+parent:
+    selector: ul.wrapper > li > div.card > div.wrapper > a:first-child
+    attribute: href
+childs:
+    -
+        content: title
+        selector: div.wrapper > article > h1
+    -
+        content: reporter
+        selector: h4[itemprop=author]
+    -
+        content: editor
+        selector: h4[itemprop=editor]
+    -
+        content: date
+        selector: span#date
+        regex: .* (\d{1,4} .* \d{1,4} \d{1,4}\:\d{1,4})
+        group: 1
+        format:
+            type: date
+            dateFormat: DD MMMM YYYY HH:mm
+            dateLocale: id
+    -
+        content: image
+        selector: figure > a > img[itemprop= image]
+        attribute: src
+    -
+        content: description
+        selector: div#isi
+    -
+        content: tag
+        selector: div.tags > li > a

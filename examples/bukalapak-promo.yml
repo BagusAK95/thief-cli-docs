@@ -1,0 +1,25 @@
+description: Bukalapak Promo List
+target:
+    uri: 'https://www.bukalapak.com/promo'
+webContent: dinamic
+autoScroll: true
+parent:
+    selector: div.o-layout > div.o-layout__item > a.c-card
+childs:
+    -
+        content: image
+        selector: div.c-card__head > img.c-card__img
+        attribute: src
+    -
+        content: title
+        selector: div.c-card__body > div.u-txt--fair
+    -
+        content: until
+        selector: div.c-card__body > div.u-txt--ellipsis
+        regex: .* (\d{1,4} .* \d{1,4})
+        group: 1
+        format:
+            type: date
+            dateFormat: DD MMMM YYYY
+            dateLocale: id
+saveAs: csv

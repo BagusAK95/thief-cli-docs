@@ -60,6 +60,22 @@ There are 2 options for scraping mode namely `thisPage` and` toDetail`.
 stealingMode: toDetail
 ```
 
+## webContent [Optional] (Default: static)
+Have 2 option for `webContent`
+* `static` will recomended if your target have no javascript to run
+* `dinamic` will recomended if your target have javascript to run
+
+```
+webContent: dinamic
+```
+
+## autoScroll [Optional] (Default: false)
+Scroll to page bottom
+
+```
+autoScroll: true
+```
+
 ## interval [Optional] (Default: 0)
 The time needed to get content from the first page and the next page
 

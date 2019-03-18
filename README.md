@@ -6,6 +6,8 @@ Thief CLI - Documentation of Yaml Configuration
 * [`target`](#target)
 * [`stealingMode`](#stealingmode-optional-default-thispage)
 * [`interval`](#interval-optional-default-0)
+* [`webContent`](#webcontent-optional-default-static)
+* [`autoScroll`](#autoscroll-optional-default-false)
 * [`parent`](#parent)
 * [`childs`](#childs)
 * [`nextPage`](#nextPage)
